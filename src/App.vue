@@ -1,7 +1,7 @@
 <template>
   <div id="app-root">
     <header class="header">
-      <h1>This is my first VueJs project</h1>
+      <h1>This is my First VueJs Project</h1>
     </header>
 
     <section class="categories-wrap">
@@ -94,14 +94,20 @@ export default {
 </script>
 
 <style>
-/* simple styles — adjust or replace with your CSS file */
+/* Remove local font override so global font works */
 #app-root {
   padding: 24px;
-  font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Header */
 .header h1 {
-  font-size: 22px;
-  margin-bottom: 18px;
+  font-size: 30px;
+  margin-bottom: 40px;
+  font-weight: 600;
+  color: green;
+  align-items: center;
+  justify-content: center;
+  display: flex;
 }
 .categories {
   display: flex;
@@ -109,12 +115,14 @@ export default {
   overflow-x: auto;
   padding-bottom: 10px;
 }
+
 .banners {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 14px;
-  margin-top: 18px;
+  margin-top: 22px;
 }
+
 @media (max-width: 900px) {
   .banners {
     grid-template-columns: 1fr;
